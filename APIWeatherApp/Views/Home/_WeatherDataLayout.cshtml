@@ -1,0 +1,15 @@
+﻿@model APIWeatherApp.Models.ResultModel
+
+<div>
+    <div>
+        <h3>Aktuelle Wetterlage in @Model.City, @Model.Country</h3>
+    </div>
+    Temperature: @Model.Temperature <br/>
+    Minimum Temperature: @Model.TemperatureMinimum <br />
+    Maximum Temperature: @Model.TemperatureMaximum <br />
+    Air Pressure: @Model.AirPressure <br />
+    Humidity: @Model.Humidity <br />
+    Wind Speed: @Model.WindSpeed <br />
+    Wind Direction: @Model.WindDirection <br />
+    Cloud Cover Condition: @Model.CloudCover <br />
+</div>

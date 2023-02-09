@@ -1,0 +1,57 @@
+﻿@model APIWeatherApp.Models.ResultModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+@using (Html.BeginForm())
+{
+    <head>
+        <style>
+            .headerStyle{
+                height:70px;
+                text-align:center;
+                background-color:deepskyblue;
+                line-height:70px;
+                justify-content: center;
+                color:white;
+                font-size:30px;
+                font-weight: bold;
+                border-style: solid;
+            }
+
+            .search{
+                border-style: solid;
+                display: block;
+                margin:auto;
+            }
+
+            .footerStyle{
+                background-color:deepskyblue;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div style="border-style:solid">
+            <div class="headerStyle">
+                Aktuelle WetterInformationen
+            </div>
+
+            <div style="background-color:lightgray">
+                <div style="color:dodgerblue; text-align:center; font-weight:bold;">
+                    Enter City Name
+                </div>
+
+                <div class="search">
+                    <input type="text" name="cityName" placeholder="City Name"/>
+                    <input style="background-color:deepskyblue; color:white" type="submit" value="Search City" />
+                </div>
+
+                <div>
+                    @Html.Partial("_WeatherDataLayout.cshtml", Model)
+                </div>
+            </div>
+        </div>
+    </body>
+}
